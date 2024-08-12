@@ -1,0 +1,290 @@
+:root {
+  font-family: League Spartan, sans-serif;
+  --clr-primary-dark-magenta: hsl(300, 43%, 22%);
+  --clr-primary-pink: hsl(333, 80%, 67%);
+
+  --clr-neutral-dark-magenta: hsl(303, 10%, 53%);
+  --clr-neutral-light-magenta: hsl(300, 24%, 96%);
+  --clr-neutral: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url(./images/bg-pattern-top-mobile.svg);
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url(./images/bg-pattern-bottom-mobile.svg);
+}
+
+main {
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  padding-top: 3rem;
+}
+
+.header {
+  font-size: 2rem;
+  line-height: 0.8;
+  font-weight: bold;
+  padding: 0 2.5rem;
+  text-align: center;
+  color: var(--clr-primary-dark-magenta);
+}
+
+.intro {
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0 1.6rem;
+  color: var(--clr-neutral-dark-magenta);
+}
+
+.reviews {
+  margin-top: 2rem;
+}
+
+.reviews__card {
+  background-color: var(--clr-neutral-light-magenta);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.card__body {
+  margin: 0;
+  margin-top: 0.25rem;
+  padding: 0;
+  font-weight: bold;
+  color: var(--clr-primary-dark-magenta);
+}
+
+.testimonials {
+  margin-top: 3rem;
+}
+
+.testimonials__testimony {
+  background-color: var(--clr-primary-dark-magenta);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 2.8rem;
+  padding-right: 2.8rem;
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
+}
+
+.testimony__header {
+  display: flex;
+}
+
+.testimony__avatar {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.testimony__profile {
+  margin-left: 1.5rem;
+}
+
+.profile__name {
+  color: var(--clr-neutral);
+  font-weight: bold;
+}
+
+.profile__status {
+  color: var(--clr-primary-pink);
+}
+
+.testimony__quote {
+  margin-top: 1.5rem;
+  display: block;
+  color: var(--clr-neutral);
+  line-height: 1.5;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    height: 100%;
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(./images/bg-pattern-top-desktop.svg);
+  }
+
+  body::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-image: url(./images/bg-pattern-bottom-desktop.svg);
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    min-height: 100vh;
+    max-width: 1024px;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  main {
+    position: relative;
+  }
+
+  .heading-wrapper {
+    display: flex;
+    gap: 4rem;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .heading-wrapper > div {
+    width: 59%;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  .header {
+    padding: 0;
+    font-size: 3.5rem;
+    text-align: left;
+  }
+
+  .intro {
+    margin-top: 2rem;
+    padding: 0;
+    text-align: left;
+    width: 80%;
+    line-height: 1.4;
+  }
+
+  .reviews {
+    position: relative;
+  }
+
+  .reviews__card {
+    width: 90%;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding-left: 1.5rem;
+    position: absolute;
+  }
+
+  .reviews__card:nth-child(2) {
+    top: 4.5rem;
+    left: 3rem;
+  }
+  
+  .reviews__card:nth-child(3) {
+    top: 9rem;
+    left: 6rem;
+  }
+
+  .card__body {
+    margin: 0;
+  }
+
+  .stars__image {
+    margin-left: 0.5rem;
+  }
+
+  .testimonials {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    margin-top: 4rem;
+  }
+
+  .testimonials__testimony {
+    position: absolute;
+    width: 28%;
+    height: 160px;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .testimonials__testimony:nth-child(2) {
+    left: 23rem;
+    top: 1rem;
+  }
+  
+  .testimonials__testimony:nth-child(3) {
+    left: 46rem;
+    top: 2rem;
+  }
+}
