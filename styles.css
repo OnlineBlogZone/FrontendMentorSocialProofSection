@@ -121,6 +121,9 @@ header {
 }
 
 .testimony__profile {
+  display: flex;
+  flex-direction: column;
+  gap: .125rem;
   margin-left: 1.5rem;
 }
 
@@ -163,7 +166,7 @@ footer {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: -55%;
     width: 100%;
     height: 100%;
     background-position: top;
@@ -181,7 +184,7 @@ footer {
     height: 100%;
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: 75%;
+    background-size: 100%;
     background-image: url(./images/bg-pattern-bottom-desktop.svg);
   }
 
@@ -271,7 +274,7 @@ footer {
 
   .testimonials__testimony {
     position: absolute;
-    width: 28%;
+    width: 27.55%;
     height: 160px;
     padding-top: 2.5rem;
     padding-bottom: 2rem;
